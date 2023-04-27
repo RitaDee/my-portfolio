@@ -4,6 +4,40 @@ import { ArrowRightCircle } from "react-bootstrap-icons";
 import headerImg from "../assets/img/header-img.svg";
 
 export const Banner = () => {
+    const [loopNum, setLoopNum] = useState(0);
+    const [isDeleting, setIsDeleting] = useState(false);
+    const toRotate = ['web developer', 'web designer', 'React js'];
+    const [text, setText] = useState('');
+    const [delta, setDelta] = useState(300 - Math.random() * 100);
+    const period = 2000;
+
+    useEffect(() => {
+        let ticker = setInterval(() => {
+            ticker()
+        }, delta)
+
+        return () => { clearInterval(ticker)};
+    }, [text])
+
+    const tick = () => {
+        let i = loopNum % toRotate.length;
+        let fullText = toRotate[i];
+        let updateText = isDeleting ? fullText.substring(0, text.length - 1) : fullText.substring(0, text.length);
+
+        setText(updateText);
+
+        if (isDeleting && text === fullText) {
+            setDelta(prevDelta => prevDelta / 2);
+        };
+        if (isDeleting && updateText === fullText) {
+            setIsDeleting(true);
+            setDelta(period);
+        } else if (isDeleting && updateText === '') {
+            setIsDeleting(false);
+            setLoopNum(loopNum + 1);
+            setDelta(500)
+        }
+    }
   return (
     <section>
       <Container>
@@ -12,7 +46,7 @@ export const Banner = () => {
             <span className="tagline">Welcome to my Portfolio</span>
             <h1>
               {`I’m a Software Developer`}
-              <span className="wrap">web developer</span>
+              <span className="wrap">{text}</span>
             </h1>
             <p>
               {" "}
