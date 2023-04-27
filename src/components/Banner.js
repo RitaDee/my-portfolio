@@ -1,4 +1,7 @@
+import { useState, useEffect } from "react";
 import { Col, Container, Row } from "react-bootstrap";
+import { ArrowRightCircle } from "react-bootstrap-icons";
+import headerImg from "../assets/img/header-img.svg";
 
 export const Banner = () => {
   return (
@@ -17,7 +20,12 @@ export const Banner = () => {
               some of my work and experience! If you like what you see and have
               a project you need coded, don’t hestiate to contact me.
             </p>
-            <button onClick={() => console.log('connect')}>Let's connect</button>
+            <button onClick={() => console.log("connect")}>
+              Let's connect <ArrowRightCircle size={25} />
+            </button>
+          </Col>
+          <Col xs={12} md={6} xl={5}>
+            <img src={headerImg} alt="header img" />
           </Col>
         </Row>
       </Container>
