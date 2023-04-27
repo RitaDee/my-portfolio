@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
 import { Navbar, Nav, Container } from 'react-bootstrap';
-import logo from '../assets/img/logo.svg';
+import logo from '../assets/img/my-logo.png';
 import navIcon1 from '../assets/img/nav-icon1.svg';
 import navIcon2 from '../assets/img/nav-icon2.svg';
 import navIcon3 from '../assets/img/nav-icon3.svg';
@@ -10,7 +10,7 @@ import {
 } from "react-router-dom";
 
 
-export const NavBar = () => {
+const NavBar = () => {
     const [activeLink, setActiveLink] = useState('home');
     const [scroll, setScroll] = useState(false);
 
@@ -63,3 +63,5 @@ export const NavBar = () => {
     </Router>
   );
 };
+
+export default NavBar;
