@@ -47,6 +47,8 @@ const Projects = () => {
                         }
                     </Row>
                 </Tab.Pane>
+                <Tab.Pane eventKey="second">Math magic</Tab.Pane>
+                <Tab.Pane eventKey="third">Leaderboard</Tab.Pane>
               </Tab.Content>
             </Tab.Container>
           </Col>
