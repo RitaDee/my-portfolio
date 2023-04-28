@@ -368,8 +368,8 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   margin-top: -60px;
 }
 
-.skill h2 {
-  font-size: 45px;
+.skill h5 {
+  font-size: 25px;
   font-weight: 700;
 }
 
