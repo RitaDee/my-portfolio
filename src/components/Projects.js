@@ -1,16 +1,33 @@
 import { Col, Container, Row, Nav, Tab } from "react-bootstrap";
+import ProjectCard from "./ProjectCard";
+import colorShape2 from "../assets/img/color-sharp2.png";
+import projImg1 from "../assets/img/project-img1.png";
+import projImg2 from "../assets/img/project2.png";
+import projImg3 from "../assets/img/project3.png";
+import projImg4 from "../assets/img/project4.png";
+
 
 const Projects = () => {
   const projects = [
     {
-      title: "Business Startup",
-      description: "Design & Development",
+      title: "Marplex RTM",
+      description: "Real Time Communication Project",
       imgUrl: projImg1,
     },
     {
-      title: "Business Startup",
+      title: "Landing Page",
       description: "Design & Development",
       imgUrl: projImg2,
+    },
+    {
+      title: "Space Traveller's Hub",
+      description: "Commercial and scientific space travel services",
+      imgUrl: projImg3,
+    },
+     {
+      title: "Cryptography",
+      description: "Crypto Services",
+      imgUrl: projImg4,
     },
   ];
 
@@ -41,7 +58,10 @@ const Projects = () => {
                     <Row>
                         {projects.map((project, index) => {
                             return (
-                                <p>{project.title}</p>
+                                <ProjectCard
+                                key={index}
+                                {...project}
+                                />
                             )
                         })
                         }
@@ -54,6 +74,7 @@ const Projects = () => {
           </Col>
         </Row>
       </Container>
+      <img className="background-image-right" src={colorShape2} alt="Img"></img>
     </section>
   );
 };
