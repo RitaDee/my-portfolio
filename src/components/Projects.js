@@ -5,6 +5,8 @@ import projImg1 from "../assets/img/project-img1.png";
 import projImg2 from "../assets/img/project2.png";
 import projImg3 from "../assets/img/project3.png";
 import projImg4 from "../assets/img/project4.png";
+import projImg5 from "../assets/img/project5.png";
+import projImg6 from "../assets/img/project6.png";
 
 
 const Projects = () => {
@@ -21,13 +23,25 @@ const Projects = () => {
     },
     {
       title: "Space Traveller's Hub",
-      description: "Commercial and scientific space travel services",
+      description: "Commercial and Scientific Space Travel Services",
       imgUrl: projImg3,
     },
      {
       title: "Cryptography",
       description: "Crypto Services",
       imgUrl: projImg4,
+    },
+
+    {
+      title: "Event Site",
+      description: "Event",
+      imgUrl: projImg5,
+    },
+     
+    {
+      title: "RS TV App",
+      description: "Media and Entertainment",
+      imgUrl: projImg6,
     },
   ];
 
