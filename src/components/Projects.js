@@ -7,6 +7,8 @@ import projImg3 from "../assets/img/project3.png";
 import projImg4 from "../assets/img/project4.png";
 import projImg5 from "../assets/img/project5.png";
 import projImg6 from "../assets/img/project6.png";
+import 'animate.css';
+
 
 
 const Projects = () => {
