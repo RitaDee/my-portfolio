@@ -5,7 +5,7 @@ import { ArrowRightCircle } from 'react-bootstrap-icons';
 import 'animate.css';
 import TrackVisibility from 'react-on-screen';
 
-const Banner = () => {
+export const Banner = () => {
   const [loopNum, setLoopNum] = useState(0);
   const [isDeleting, setIsDeleting] = useState(false);
   const [text, setText] = useState('');
@@ -56,7 +56,7 @@ const Banner = () => {
               {({ isVisible }) =>
               <div className={isVisible ? "animate__animated animate__fadeIn" : ""}>
                 <span className="tagline">Welcome to my Portfolio</span>
-                <h1>{`Hello! I'm Rita`} <span className="txt-rotate" dataPeriod="1000" data-rotate='[ "A Software Developer", "JavaScript/React.js Lover", "And A Web Designer" ]'><span className="wrap">{text}</span></span></h1>
+                <h1>{`Hello! I'm Rita`} <span className="txt-rotate" dataperiod="1000" data-rotate='[ "A Software Developer", "JavaScript/React.js Lover", "And A Web Designer" ]'><span className="wrap">{text}</span></span></h1>
                   <p>As a software developer, I am skilled in a variety of programming languages and frameworks. 
                     I am passionate about creating clean, efficient, and scalable code that helps solve real-world problems. 
                     I enjoy working collaboratively with other developers, designers, and stakeholders to deliver high-quality software products.</p>
@@ -78,5 +78,3 @@ const Banner = () => {
     </section>
   )
 }
-
-export default Banner;

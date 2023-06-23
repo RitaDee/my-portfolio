@@ -151,9 +151,9 @@ span.navbar-text {
   border: 1px solid rgba(255, 255, 255, 0.5);
 }
 
-.social-icon a:nth-child(3) {
+/* .social-icon a:nth-child(3) {
   background: #fff;
-}
+} */
 
 .social-icon a::before {
   content: "";

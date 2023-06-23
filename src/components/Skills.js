@@ -52,11 +52,11 @@ export const Skills = () => {
                         </div>
                         <div className="item">
                             <img src={meter2} alt="Img" />
-                            <h5>Bootstrap</h5>
+                            <h5>SQL</h5>
                         </div>
                         <div className="item">
                             <img src={meter3} alt="Img" />
-                            <h5>SQL</h5>
+                            <h5>Ruby on Rails</h5>
                         </div>
                     </Carousel>
                 </div>
