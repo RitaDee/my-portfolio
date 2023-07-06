@@ -1,18 +1,18 @@
 /************ Custom Font ************/
 @font-face {
-  font-family: Centra;
+  font-family: sans-serif;
   src: url('./assets/font/CentraNo2-Bold.ttf');
   font-weight: 700;
 }
 
 @font-face {
-  font-family: Centra;
+  font-family: sans-serif;
   src: url('./assets/font/CentraNo2-Medium.ttf');
   font-weight: 500;
 }
 
 @font-face {
-  font-family: Centra;
+  font-family: sans-serif;
   src: url('./assets/font/CentraNo2-Book.ttf');
   font-weight: 400;
 }
