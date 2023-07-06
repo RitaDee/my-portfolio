@@ -7,30 +7,33 @@ import projImg7 from "../assets/img/project7.png";
 import projImg4 from "../assets/img/project4.png";
 import projImg5 from "../assets/img/project5.png";
 import projImg6 from "../assets/img/project6.png";
+import projImg8 from "../assets/img/project8.png";
 import 'animate.css';
 import TrackVisibility from 'react-on-screen';
 
 
 export const Projects = () => {
   const firstProjects = [
+
+    {
+      title: "Event Connect",
+      description: "Event Connect is an application which allows users to create, delete and reserve available event.",
+      imgUrl: projImg8,
+      link: 'https://event-connect-capstone.web.app/'
+    },
+
     {
       title: "Marplex RTM",
-      description: "Real Time Communication Project",
+      description: "A real time messaging & video calling web app. Built with HTML, CSS and JavaScript.",
       imgUrl: projImg1,
       link: "https://marplexr.netlify.app/"
     },
     {
-      title: "Budget App",
-      description: "Diva Spends",
+      title: "Diva Spends",
+      description: "Diva Spends is a web app to manage budget. The user adds new transactions associated with an expense category. A database store the budget.",
       imgUrl: projImg7,
       link: 'https://diva-spends.onrender.com/'
     },
-    {
-      title: "Space Traveller's Hub",
-      description: "Reserve Rockets",
-      imgUrl: projImg4,
-      link: "https://spacetravel-speculoos-5b113c.netlify.app/"
-    }
   ];
 
   const secondProjects = [
@@ -42,9 +45,10 @@ export const Projects = () => {
     },
     
     {
-      title: "Event Site",
-      description: "Event",
-      imgUrl: projImg5,
+      title: "Space Traveller's Hub",
+      description: "Reserve Rockets",
+      imgUrl: projImg4,
+      link: "https://spacetravel-speculoos-5b113c.netlify.app/"
     },
      
     {
@@ -54,6 +58,14 @@ export const Projects = () => {
       link: "https://ritadee.github.io/Leader-board/dist/"
     },
   ];
+
+  const thirdProjects = [
+     {
+      title: "Event Site",
+      description: "Event",
+      imgUrl: projImg5,
+    },
+  ]
 
   return (
     <section className="project" id="project">
@@ -107,8 +119,20 @@ export const Projects = () => {
                         }
                     </Row>
                 </Tab.Pane>
-                <Tab.Pane eventKey="second"></Tab.Pane>
-                <Tab.Pane eventKey="third">Problem Solving is key in Software development</Tab.Pane>
+                {/* <Tab.Pane eventKey="second"></Tab.Pane> */}
+                <Tab.Pane eventKey="third">
+                  <Row>
+                    {thirdProjects.map((project, index) => {
+                      return (
+                        <ProjectCard 
+                        key={index}
+                        {...project}
+                        />
+                      )
+                    })
+                  }
+                  </Row>
+                </Tab.Pane>
               </Tab.Content>
             </Tab.Container>
             </div>}
