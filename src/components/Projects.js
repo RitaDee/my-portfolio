@@ -8,6 +8,8 @@ import projImg4 from "../assets/img/project4.png";
 import projImg5 from "../assets/img/project5.png";
 import projImg6 from "../assets/img/project6.png";
 import projImg8 from "../assets/img/project8.png";
+import projImg9 from "../assets/img/project9.png";
+import projImg10 from "../assets/img/project10.png";
 import 'animate.css';
 import TrackVisibility from 'react-on-screen';
 
@@ -64,7 +66,20 @@ export const Projects = () => {
       title: "Event Site",
       description: "Event",
       imgUrl: projImg5,
+      link: "https://ritadee.github.io/Art-and-culture/"
     },
+    {
+      title: "Landing Page",
+      description: "Our landing page offers a seamless user experience, showcasing our cutting-edge products and services.",
+      imgUrl: projImg9,
+      link: "https://landingpag45.netlify.app/"
+    },
+    {
+      title: "Math Magic",
+      description: "This app performs basic mathematical operations such as addition, subtraction, multiplication, and division.",
+      imgUrl: projImg10,
+      link: "https://mathdee.netlify.app/"
+    }
   ]
 
   return (
