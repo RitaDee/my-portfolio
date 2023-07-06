@@ -58,7 +58,7 @@ export const Banner = () => {
                     I am passionate about creating clean, efficient, and scalable code that helps solve real-world problems. 
                     I enjoy working collaboratively with other developers, designers, and stakeholders to deliver high-quality software products.</p>
 
-                  <button>Let’s Connect<a href='#connect'><ArrowRightCircle size={25} color="white" /></a></button>
+                  <button className="vd">Contact Me<a href='#connect'><ArrowRightCircle size={25} color="white" /></a></button>
                   
               </div>}
             </TrackVisibility>

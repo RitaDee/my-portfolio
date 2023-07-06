@@ -354,6 +354,13 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   border-right: 0.08em solid #666;
 }
 
+.vd {
+  border: 2px solid #fff;
+  padding: 1rem;
+  font-size: 500;
+  background: linear-gradient(90.21deg, #9c286d -5.91%, #3c20bc 111.58%);
+}
+
 /************ Skills Css ************/
 .skill {
   padding: 0 0 50px 0;
