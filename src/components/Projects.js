@@ -1,15 +1,15 @@
 import { Col, Container, Row, Nav, Tab } from "react-bootstrap";
 import { ProjectCard } from "./ProjectCard";
-import colorShape2 from "../assets/img/color-sharp2.png";
-import projImg1 from "../assets/img/project-img1.png";
-import projImg2 from "../assets/img/project2.png";
-import projImg7 from "../assets/img/project7.png";
-import projImg4 from "../assets/img/project4.png";
-import projImg5 from "../assets/img/project5.png";
-import projImg6 from "../assets/img/project6.png";
-import projImg8 from "../assets/img/project8.png";
-import projImg9 from "../assets/img/project9.png";
-import projImg10 from "../assets/img/project10.png";
+import colorShape2 from "../assets/img/color-sharp2.WebP";
+import projImg1 from "../assets/img/project-img1.WebP";
+import projImg2 from "../assets/img/project2.WebP";
+import projImg7 from "../assets/img/project7.WebP";
+import projImg4 from "../assets/img/project4.WebP";
+import projImg5 from "../assets/img/project5.WebP";
+import projImg6 from "../assets/img/project6.WebP";
+import projImg8 from "../assets/img/project8.WebP";
+import projImg9 from "../assets/img/project9.WebP";
+import projImg10 from "../assets/img/project10.WebP";
 import 'animate.css';
 import TrackVisibility from 'react-on-screen';
 
