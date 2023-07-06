@@ -553,6 +553,29 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   z-index: -4;
 }
 
+.source {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 2rem;
+  padding: 1rem;
+}
+
+.source button {
+  padding: 1rem;
+  border: 1px solid #63264b;
+  font-size: 1.2rem;
+  width: 100%;
+}
+
+.source button:hover {
+  background: linear-gradient(90.21deg, #AA367C -5.91%, #4A2FBD 111.58%);
+}
+
+.source button a {
+  text-decoration: none;
+  color: #fff;
+}
 /************ Projects Css ************/
 .contact {
   background: linear-gradient(90.21deg, #AA367C -5.91%, #4A2FBD 111.58%);
