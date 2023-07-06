@@ -56,6 +56,26 @@ export const Skills = () => {
                             <img src={meter3} alt="Img" />
                             <h5>Ruby on Rails</h5>
                         </div>
+                        <div className="item">
+                            <img src={meter3} alt="Img" />
+                            <h5>Redux</h5>
+                        </div>
+                        <div className="item">
+                            <img src={meter2} alt="Img" />
+                            <h5>React</h5>
+                        </div>
+                        <div className="item">
+                            <img src={meter1} alt="Img" />
+                            <h5>Remote Pair-Programming</h5>
+                        </div>
+                        <div className="item">
+                            <img src={meter1} alt="Img" />
+                            <h5>Teamwork</h5>
+                        </div>
+                        <div className="item">
+                            <img src={meter1} alt="Img" />
+                            <h5>Mentoring</h5>
+                        </div>
                     </Carousel>
                 </div>
                 </Col>
