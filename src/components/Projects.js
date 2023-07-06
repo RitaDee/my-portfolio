@@ -19,7 +19,7 @@ export const Projects = () => {
 
     {
       title: "Event Connect",
-      description: "Event Connect is an application which allows users to create, delete and reserve available event.",
+      description: "Event Connect is an application which allows users to create, delete and reserve available event. Built with React, Ruby on Rails and Chakra Ui",
       imgUrl: projImg8,
       link: 'https://event-connect-capstone.web.app/'
     },
@@ -32,7 +32,7 @@ export const Projects = () => {
     },
     {
       title: "Diva Spends",
-      description: "Diva Spends is a web app to manage budget. The user adds new transactions associated with an expense category. A database store the budget.",
+      description: "Diva Spends is a web app to manage budget. The user adds new transactions associated with an expense category. A database store the budget. Built with Ruby on Rails",
       imgUrl: projImg7,
       link: 'https://diva-spends.onrender.com/'
     },
@@ -41,21 +41,21 @@ export const Projects = () => {
   const secondProjects = [
     {
       title: "RS TV App",
-      description: "Media and Entertainment",
+      description: "RS TV is an Api-based media and entertainment application. Built with JavaScript",
       imgUrl: projImg6,
       link: "https://ritadee.github.io/RS-Movie-App/dist/"
     },
     
     {
       title: "Space Traveller's Hub",
-      description: "Reserve Rockets",
+      description: "This webapp works with real live data from the SpaceX API. The application provides commercial and scientific space travel services. It also allows users to book rockets and join selected space missions. Built with React, and Redux",
       imgUrl: projImg4,
       link: "https://spacetravel-speculoos-5b113c.netlify.app/"
     },
      
     {
       title: "Leaderboard",
-      description: "Design & Development",
+      description: "This app is a dynamic leaderboard that is designed to showcase the top scores of players using an API endpoint. The app is built using a combination of webpack, Javascript, CSS, and HTML.",
       imgUrl: projImg2,
       link: "https://ritadee.github.io/Leader-board/dist/"
     },
@@ -107,6 +107,7 @@ export const Projects = () => {
                   <Nav.Link eventKey="third">Tab 3</Nav.Link>
                 </Nav.Item>
               </Nav>
+
               <Tab.Content id="slideInUp" className={isVisible ? "animate__animated animate__slideInUp" : ""}>
                 <Tab.Pane eventKey="first">
                       <Row>
@@ -121,6 +122,7 @@ export const Projects = () => {
                         }
                       </Row>
                     </Tab.Pane>
+
                 <Tab.Pane eventKey="second">
                     <Row>
                         {secondProjects.map((project, index) => {
@@ -134,7 +136,7 @@ export const Projects = () => {
                         }
                     </Row>
                 </Tab.Pane>
-                {/* <Tab.Pane eventKey="second"></Tab.Pane> */}
+            
                 <Tab.Pane eventKey="third">
                   <Row>
                     {thirdProjects.map((project, index) => {
