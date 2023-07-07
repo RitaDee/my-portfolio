@@ -72,7 +72,7 @@ export const Projects = () => {
       title: "Event Site",
       description: "Event",
       imgUrl: projImg5,
-      link: "https://ritadee.github.io/Art-and-culture/",
+      link: "https://artevent.netlify.app/",
       GitHub: "https://github.com/RitaDee/Art-and-culture"
     },
     {
