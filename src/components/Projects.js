@@ -62,7 +62,7 @@ export const Projects = () => {
       title: "Leaderboard",
       description: "This app is a dynamic leaderboard that is designed to showcase the top scores of players using an API endpoint. The app is built using a combination of webpack, Javascript, CSS, and HTML.",
       imgUrl: projImg2,
-      link: "https://ritadee.github.io/Leader-board/dist/",
+      link: "https://leaderboardchart.netlify.app/",
       GitHub: "https://github.com/RitaDee/Leader-board"
     },
   ];
