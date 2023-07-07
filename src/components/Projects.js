@@ -46,7 +46,7 @@ export const Projects = () => {
       title: "RS TV App",
       description: "RS TV is an Api-based media and entertainment application. Built with JavaScript",
       imgUrl: projImg6,
-      link: "https://ritadee.github.io/RS-Movie-App/dist/",
+      link: "https://watchrsmovies.netlify.app/",
       GitHub: "https://github.com/RitaDee/RS-Movie-App", 
     },
     
