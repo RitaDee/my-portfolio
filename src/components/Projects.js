@@ -18,14 +18,6 @@ export const Projects = () => {
   const firstProjects = [
 
     {
-      title: "Event Connect",
-      description: "Event Connect is an application which allows users to create, delete and reserve available event. Built with React, Ruby on Rails and Chakra Ui",
-      imgUrl: projImg8,
-      link: 'https://event-connect-capstone.web.app/',
-      GitHub: "https://github.com/RitaDee/event_connect"
-    },
-
-    {
       title: "Marplex RTM",
       description: "A real time messaging & video calling web app. Built with HTML, CSS and JavaScript.",
       imgUrl: projImg1,
@@ -39,6 +31,13 @@ export const Projects = () => {
       link: 'https://diva-spends.onrender.com/',
       GitHub: "https://github.com/RitaDee/budget_app"
     },
+    {
+      title: "Event Connect",
+      description: "Event Connect is an application which allows users to create, delete and reserve available event. Built with React, Ruby on Rails and Chakra Ui",
+      imgUrl: projImg8,
+      link: 'https://event-connect-capstone.web.app/',
+      GitHub: "https://github.com/RitaDee/event_connect"
+    }
   ];
 
   const secondProjects = [
