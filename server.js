@@ -21,32 +21,3 @@ contactEmail.verify((error) => {
     console.log("Ready to Send");
   }
 });
-
-app.post("/contact", (req, res) => {
-  const { firstName, lastName, email, message, phone } = req.body;
-  const name = firstName + " " + lastName;
-
-  const mail = {
-    from: name,
-    to: "ritankemdaniel@gmail.com",
-    subject: "Contact Form Submission - Portfolio",
-    html: `
-      <p>Name: ${name}</p>
-      <p>Email: ${email}</p>
-      <p>Phone: ${phone}</p>
-      <p>Message: ${message}</p>
-    `,
-  };
-
-  contactEmail.sendMail(mail, (error) => {
-    if (error) {
-      res.json(error);
-    } else {
-      res.json({ code: 200, status: "Message Sent" });
-    }
-  });
-});
-
-app.listen(3000, () => {
-  console.log("Server Running");
-});
