@@ -3,8 +3,8 @@ const app = express();
  
 const nodemailer = require("nodemailer");
 
-app.use(cors());
-app.use(express.json());
+// app.use(cors());
+// app.use(express.json());
 
 const contactEmail = nodemailer.createTransport({
   service: "gmail",
