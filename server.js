@@ -5,11 +5,7 @@ const app = express();
 // app.use(express.json());
 
 // const contactEmail = nodemailer.createTransport({
-//   service: "gmail",
-//   auth: {
-//     user: "ritankemdaniel@gmail.com", // Replace with your email
-//     pass: 
-//   },
+//   service: "gmail"
 // });
 
 // contactEmail.verify((error) => {
