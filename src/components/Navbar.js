@@ -53,43 +53,93 @@ export const NavBar = () => {
             <Nav className="ms-auto">
               <Nav.Link
                 href="#home"
-                className={activeLink === "home" ? "active navbar-link" : "navbar-link"}
+                className={
+                  activeLink === "home" ? "active navbar-link" : "navbar-link"
+                }
                 onClick={() => onUpdateActiveLink("home")}
               >
                 Home
               </Nav.Link>
               <Nav.Link
                 href="#skills"
-                className={activeLink === "skills" ? "active navbar-link" : "navbar-link"}
+                className={
+                  activeLink === "skills" ? "active navbar-link" : "navbar-link"
+                }
                 onClick={() => onUpdateActiveLink("skills")}
               >
                 Skills
               </Nav.Link>
               <Nav.Link
                 href="#project"
-                className={activeLink === "projects" ? "active navbar-link" : "navbar-link"}
+                className={
+                  activeLink === "projects"
+                    ? "active navbar-link"
+                    : "navbar-link"
+                }
                 onClick={() => onUpdateActiveLink("projects")}
               >
                 Projects
               </Nav.Link>
             </Nav>
 
-            <Link to="#" className="navbar-link" onClick={handleShowOsModal}>
+            <Link
+              to="#"
+              className={
+                activeLink === "os"
+                  ? "active navbar-link os-link"
+                  : "navbar-link os-link"
+              }
+              onClick={handleShowOsModal}
+            >
               OS
             </Link>
 
             {/* Social icons and "Let’s Connect" button here */}
+            <span className="navbar-text">
+              <div className="social-icon">
+                <a
+                  rel="noreferrer"
+                  target="_blank"
+                  href="https://www.linkedin.com/in/rita-daniel/"
+                >
+                  <img src={navIcon1} alt="LinkedIn" />
+                </a>
+                <a
+                  rel="noreferrer"
+                  target="_blank"
+                  href="https://twitter.com/durdana_dee"
+                >
+                  <img src={navIcon2} alt="Twitter" />
+                </a>
+                <a
+                  rel="noreferrer"
+                  target="_blank"
+                  href="https://github.com/RitaDee"
+                >
+                  <img src={navIcon3} alt="GitHub" className="git" />
+                </a>
+              </div>
+              <HashLink to="#connect">
+                <button className="vd">
+                  <span>Let’s Connect</span>
+                </button>
+              </HashLink>
+            </span>
           </Navbar.Collapse>
         </Container>
       </Navbar>
 
       {/* Modal for OS component */}
-      <Modal show={showOsModal} onHide={handleCloseOsModal}>
+      <Modal
+        show={showOsModal}
+        onHide={handleCloseOsModal}
+        className="os-modal"
+      >
         <Modal.Header closeButton>
           <Modal.Title>Open Source Contributions</Modal.Title>
         </Modal.Header>
         <Modal.Body>
-          <Os /> 
+          <Os />
         </Modal.Body>
       </Modal>
     </Router>

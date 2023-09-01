@@ -789,3 +789,31 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   background-color: #ccc;
   cursor: not-allowed;
 }
+
+/* Styling for the "OS" link */
+.navbar .navbar-nav .nav-link.navbar-link.os-link {
+  font-weight: 400;
+  color: #fff !important;
+  letter-spacing: 0.8px;
+  padding: 0 25px;
+  font-size: 18px;
+  opacity: 0.75;
+  /* Add your desired styles here */
+}
+
+/* Styling for the "OS" link when it's active */
+.navbar .navbar-nav .nav-link.navbar-link.os-link.active {
+  opacity: 1;
+  /* Add your desired styles for the active link here */
+}
+
+/* Styling for the modal */
+.os-modal {
+  /* Add your modal styles here */
+  background-color: #121212;
+  /* Example background color */
+  color: #fff;
+  /* Example text color */
+}
+
+/* Additional styles for the modal content, header, etc. can be added here */
