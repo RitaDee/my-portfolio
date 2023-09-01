@@ -8,6 +8,7 @@ import { Contact } from './components/Contact';
 import { Projects } from './components/Projects';
 import { Footer } from './components/Footer';
 
+
 function App() {
   return (
     <div className="App">
@@ -17,6 +18,7 @@ function App() {
       <Projects/>
       <Contact/>
       <Footer/>
+     
     </div>
   );
 }
