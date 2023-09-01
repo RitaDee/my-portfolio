@@ -89,7 +89,7 @@ export const NavBar = () => {
           <Modal.Title>Open Source Contributions</Modal.Title>
         </Modal.Header>
         <Modal.Body>
-          <Os /> {/* Render the Os component inside the modal */}
+          <Os /> 
         </Modal.Body>
       </Modal>
     </Router>
