@@ -9,6 +9,7 @@ import {
   BrowserRouter as Router
 } from "react-router-dom";
 
+
 export const NavBar = () => {
 
   const [activeLink, setActiveLink] = useState('home');
@@ -48,6 +49,11 @@ export const NavBar = () => {
               <Nav.Link href="#skills" className={activeLink === 'skills' ? 'active navbar-link' : 'navbar-link'} onClick={() => onUpdateActiveLink('skills')}>Skills</Nav.Link>
               <Nav.Link href="#project" className={activeLink === 'projects' ? 'active navbar-link' : 'navbar-link'} onClick={() => onUpdateActiveLink('projects')}>Projects</Nav.Link>
             </Nav>
+           
+            {/* <ScrollLink to="os" smooth={true} duration={500}>
+  OS
+</ScrollLink> */}
+
             <span className="navbar-text">
               <div className="social-icon">
                 <a rel="noreferrer" target="_blank" href="https://www.linkedin.com/in/rita-daniel/"><img src={navIcon1} alt="LinkedIn" /></a>
