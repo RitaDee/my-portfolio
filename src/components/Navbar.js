@@ -6,7 +6,7 @@ import navIcon2 from "../assets/img/nav-icon2.svg";
 import navIcon3 from "../assets/img/nav-icon3.svg";
 import { HashLink } from "react-router-hash-link";
 import { BrowserRouter as Router, Link } from "react-router-dom";
-import Os from "./oss"; // Import the Os component
+import Os from "./oss"; 
 
 export const NavBar = () => {
   const [activeLink, setActiveLink] = useState("home");
