@@ -771,35 +771,17 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
 }
 
 /* Os.css */
-.load-more-button {
-  margin-top: 20px;
-  padding: 10px 20px;
-  background-color: #007bff;
-  color: #fff;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-}
 
-.load-more-button:hover {
-  background-color: #0056b3;
-}
-
-.load-more-button:disabled {
-  background-color: #ccc;
-  cursor: not-allowed;
-}
 
 /* Styling for the "OS" link */
-.navbar .navbar-nav .nav-link.navbar-link.os-link {
+/* .navbar .navbar-nav .nav-link.navbar-link.os-link {
   font-weight: 400;
   color: #fff !important;
   letter-spacing: 0.8px;
   padding: 0 25px;
   font-size: 18px;
   opacity: 0.75;
-  /* Add your desired styles here */
-}
+} */
 
 /* Styling for the "OS" link when it's active */
 .navbar .navbar-nav .nav-link.navbar-link.os-link.active {
@@ -816,4 +798,114 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   /* Example text color */
 }
 
-/* Additional styles for the modal content, header, etc. can be added here */
+/* ContributionCard.css */
+/* .os-item {
+  display: flex;
+  align-items: center;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  margin-bottom: 10px;
+} */
+
+/* .icon {
+  flex: 0 0 30px;
+  height: 30px;
+  width: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 18px;
+  border-radius: 50%;
+  margin-right: 10px;
+} */
+
+.icon.completed {
+  background-color: #4caf50;
+  /* Green */
+  color: white;
+}
+
+.icon.not_planned {
+  background-color: #f44336;
+  /* Red */
+  color: white;
+}
+
+.content {
+  flex: 1;
+}
+
+.title {
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+.status {
+  font-size: 14px;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+.owner {
+  font-size: 14px;
+}
+
+/* Os.css */
+#os {
+  padding: 40px;
+  background-color: #f8f9fa;
+  text-align: center;
+}
+
+.os-title {
+  font-size: 32px;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.os-description {
+  font-size: 18px;
+  color: #666;
+  margin-bottom: 30px;
+}
+
+.os-item {
+  display: flex;
+  align-items: center;
+  padding: 20px;
+  border: 1px solid #ddd;
+  margin-bottom: 20px;
+  background-color: #fff;
+}
+
+.os-icon {
+  font-size: 24px;
+  margin-right: 20px;
+}
+
+.os-content {
+  flex-grow: 1;
+}
+
+.os-title {
+  font-size: 20px;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+.os-status {
+  font-size: 16px;
+  color: #666;
+}
+
+.os-owner {
+  font-size: 16px;
+  color: #666;
+}
+
+a {
+  text-decoration: none;
+  color: 'inherit',
+}

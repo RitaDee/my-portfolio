@@ -1,21 +1,6 @@
 import React, { useEffect, useState } from 'react';
-import { VscIssues, VscGitPullRequest } from 'react-icons/vsc';
-import { HiOutlineCheckCircle } from 'react-icons/hi';
-import { ListGroup } from 'react-bootstrap'; // Import ListGroup component from react-bootstrap
-
-const Icon = {
-  issue: {
-    completed: HiOutlineCheckCircle,
-    not_planned: HiOutlineCheckCircle,
-  },
-  pr: VscGitPullRequest,
-};
-
-const displayIcon = (type, status) => {
-  if (type === 'issue') return Icon[type][status] || VscIssues;
-
-  return Icon[type];
-};
+import { ListGroup } from 'react-bootstrap'; 
+import ContributionCard from './ContributionCard';
 
 const Os = () => {
   const description =
@@ -29,12 +14,11 @@ const Os = () => {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        // const type = "issue"; // Change this as needed
-        const perPage = 50; // Change this as needed
+        const perPage = 20; 
         const page = 1; 
 
         const baseUrl = new URL("https://api.github.com/search/issues");
-        let query = `author:RitaDee -user:RitaDee type`;
+        let query = `author:RitaDee -user:RitaDee`;
         baseUrl.searchParams.set("q", query);
         baseUrl.searchParams.set("per_page", `${perPage}`);
         baseUrl.searchParams.set("page", `${page}`);
@@ -44,41 +28,33 @@ const Os = () => {
           throw new Error(`API request failed with status: ${response.status}`);
         }
         const { items } = await response.json();
+         console.log(items)
 
         setContributions(items); // Set contributions in state
       } catch (error) {
         console.error("Something went wrong:", error);
       }
     }
-
+    
     fetchData();
   }, []);
 
   // Render your component here
   return (
-     <div id="os">
-      <h1>{title}</h1>
-      <p>{description}</p>
+    <div id="os">
+      <h1 className="os-title">{title}</h1>
+      <p className="os-description">{description}</p>
       <ListGroup>
-        {" "}
-        {/* Wrap your contributions in a ListGroup component */}
         {contributions.map((contribution) => (
-          <ListGroup.Item key={contribution.id} className="os-item">
-            {React.createElement(
-              displayIcon(
-                contribution.pull_request ? "pr" : "issue",
-                contribution.state
-              )
-            )}{" "}
-            {contribution.title}
-            <span className={`status ${contribution.state}`}>
-              {contribution.state}
-            </span>
-          </ListGroup.Item>
+          <ContributionCard
+            contribution={contribution}
+            key={contribution.id}
+          />
         ))}
       </ListGroup>
     </div>
   );
 };
+
 
 export default Os;
