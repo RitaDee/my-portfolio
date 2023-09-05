@@ -1,21 +1,23 @@
-import React, { useEffect, useState } from 'react';
-import { ListGroup } from 'react-bootstrap'; 
-import ContributionCard from './ContributionCard';
+import React, { useEffect, useState } from "react";
+import { ListGroup, Table } from "react-bootstrap";
+import ContributionCard from "./ContributionCard";
+import Form from "react-bootstrap/Form";
 
 const Os = () => {
+  const title = "Open Source Contributions";
   const description =
-    'List of open source contributions made by Rita Daniel';
-  const title = 'Rita Daniel Open Source Contributions'; // Define the title
+    "Embracing Open Source: My Passion for Public-Driven Contributions";
 
-  // Add state for contributions
   const [contributions, setContributions] = useState([]);
+  const [selectedType, setSelectedType] = useState("Issues");
+  const [selectedPerPage, setSelectedPerPage] = useState("10");
+  const [filteredContributions, setFilteredContributions] = useState([]);
 
-  // Fetch contributions when the component mounts
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const perPage = 20; 
-        const page = 1; 
+        const perPage = 20;
+        const page = 1;
 
         const baseUrl = new URL("https://api.github.com/search/issues");
         let query = `author:RitaDee -user:RitaDee`;
@@ -28,33 +30,84 @@ const Os = () => {
           throw new Error(`API request failed with status: ${response.status}`);
         }
         const { items } = await response.json();
-         console.log(items)
+        console.log(items);
 
         setContributions(items); // Set contributions in state
       } catch (error) {
         console.error("Something went wrong:", error);
       }
-    }
-    
+    };
+
     fetchData();
   }, []);
 
-  // Render your component here
+  useEffect(() => {
+    const filtered = contributions.filter((contribution) => {
+      const isTypeMatch =
+        selectedType === "Issues"
+          ? !contribution.pull_request
+          : contribution.pull_request;
+      const isPerPageMatch =
+        Number(selectedPerPage) === 10
+          ? true
+          : Number(selectedPerPage) === 20
+          ? true
+          : Number(selectedPerPage) === 30
+          ? true
+          : false;
+
+      return isTypeMatch && isPerPageMatch;
+    });
+
+    setFilteredContributions(filtered);
+  }, [contributions, selectedType, selectedPerPage]);
+
   return (
     <div id="os">
-      <h1 className="os-title">{title}</h1>
-      <p className="os-description">{description}</p>
+      <h1>{title}</h1>
+      <p>{description}</p>
+      <div className="issue-type">
+        <Form.Select
+          style={{ width: 250 }}
+          size="lg"
+          value={selectedType}
+          onChange={(e) => setSelectedType(e.target.value)}
+        >
+          <span>Type</span>
+          <option>Issues</option>
+          <option>Pull Requests</option>
+        </Form.Select>
+        <br />
+        <Form.Select
+          style={{ width: 250 }}
+          value={selectedPerPage}
+          onChange={(e) => setSelectedPerPage(e.target.value)}
+        >
+          <span>Per Page</span>
+          <option>10</option>
+          <option>20</option>
+          <option>30</option>
+        </Form.Select>
+      </div>
       <ListGroup>
-        {contributions.map((contribution) => (
-          <ContributionCard
-            contribution={contribution}
-            key={contribution.id}
-          />
-        ))}
+        <Table striped bordered hover responsive>
+          <thead style={{ color: "white" }}>
+            <tr>
+              <th>RepoOrg</th>
+              <th>Contribution</th>
+              <th>Status</th>
+            </tr>
+          </thead>
+          {filteredContributions.map((contribution) => (
+            <ContributionCard
+              contribution={contribution}
+              key={contribution.id}
+            />
+          ))}
+        </Table>
       </ListGroup>
     </div>
   );
 };
-
 
 export default Os;
