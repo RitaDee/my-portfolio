@@ -8,13 +8,13 @@ import { Contact } from './components/Contact';
 import { Projects } from './components/Projects';
 import { Footer } from './components/Footer';
 import Os from './components/oss';
-import { Tawk } from './components/tawk';
+import Tawk from './components/Tawk';
 
 function App() {
   return (
     <div className="App">
-      <Tawk />
       <NavBar/>
+      <Tawk />
       <Banner/>
       <Skills/>
       <Projects/>

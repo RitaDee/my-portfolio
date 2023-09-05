@@ -1,6 +1,6 @@
 import React, { useEffect } from "react";
 
-export const Tawk = () => {
+ const Tawk = () => {
     useEffect(() => {
   var Tawk_API = Tawk_API || {},
     Tawk_LoadStart = new Date();
@@ -16,3 +16,5 @@ export const Tawk = () => {
 }, []);
   return <div />;
 };
+
+export default Tawk;
