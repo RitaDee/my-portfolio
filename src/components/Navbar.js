@@ -31,14 +31,6 @@ export const NavBar = () => {
     setActiveLink(value);
   };
 
-  const handleShowOsModal = () => {
-    setShowOsModal(true); // Show the modal when "OS" is clicked
-  };
-
-  const handleCloseOsModal = () => {
-    setShowOsModal(false); // Close the modal
-  };
-
   return (
     <Router>
       <Navbar expand="md" className={scrolled ? "scrolled" : ""}>
