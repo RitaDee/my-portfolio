@@ -8,10 +8,12 @@ import { Contact } from './components/Contact';
 import { Projects } from './components/Projects';
 import { Footer } from './components/Footer';
 import Os from './components/oss';
+import { Tawk } from './components/tawk';
 
 function App() {
   return (
     <div className="App">
+      <Tawk />
       <NavBar/>
       <Banner/>
       <Skills/>
