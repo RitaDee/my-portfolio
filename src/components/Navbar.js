@@ -85,7 +85,6 @@ export const NavBar = () => {
               </Nav.Link>
             </Nav>
 
-            {/* Social icons and "Let’s Connect" button here */}
             <span className="navbar-text">
               <div className="social-icon">
                 <a
