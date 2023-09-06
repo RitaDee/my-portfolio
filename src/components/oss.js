@@ -11,12 +11,13 @@ const Os = () => {
   const [contributions, setContributions] = useState([]);
   const [selectedType, setSelectedType] = useState("Issues");
   const [selectedPerPage, setSelectedPerPage] = useState("10");
+  console.log("Initial selectedPerPage:", selectedPerPage);
   const [filteredContributions, setFilteredContributions] = useState([]);
 
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const perPage = 20;
+        const perPage = 30;
         const page = 1;
 
         const baseUrl = new URL("https://api.github.com/search/issues");
@@ -30,7 +31,6 @@ const Os = () => {
           throw new Error(`API request failed with status: ${response.status}`);
         }
         const { items } = await response.json();
-        console.log(items);
 
         setContributions(items); // Set contributions in state
       } catch (error) {
@@ -48,13 +48,9 @@ const Os = () => {
           ? !contribution.pull_request
           : contribution.pull_request;
       const isPerPageMatch =
-        Number(selectedPerPage) === 10
-          ? true
-          : Number(selectedPerPage) === 20
-          ? true
-          : Number(selectedPerPage) === 30
-          ? true
-          : false;
+        Number(selectedPerPage) === 10 ||
+        Number(selectedPerPage) === 20 ||
+        Number(selectedPerPage) === 30;
 
       return isTypeMatch && isPerPageMatch;
     });
@@ -98,12 +94,14 @@ const Os = () => {
               <th>Status</th>
             </tr>
           </thead>
-          {filteredContributions.map((contribution) => (
-            <ContributionCard
-              contribution={contribution}
-              key={contribution.id}
-            />
-          ))}
+          {filteredContributions
+            .slice(0, Number(selectedPerPage))
+            .map((contribution) => (
+              <ContributionCard
+                contribution={contribution}
+                key={contribution.id}
+              />
+            ))}
         </Table>
       </ListGroup>
     </div>
