@@ -53,8 +53,8 @@ const Os = () => {
           onChange={(e) => setQuery(e.target.value)}
         >
           <span>Type</span>
-          <option value="is:issue">Issues</option>
-          <option value="is:pr is:merged">Pull Requests</option>
+          <option value="type:issue">Issues</option>
+          <option value="type:pr">Pull Requests</option>
         </Form.Select>
         <br />
         <Form.Select
@@ -84,6 +84,7 @@ const Os = () => {
               <ContributionCard
                 contribution={contribution}
                 key={contribution.id}
+                isMerged={contribution.pull_request && contribution.state === "closed"}
               />
             ))}
         </Table>

@@ -20,8 +20,20 @@ const displayIcon = (type, status) => {
   return Icon[type];
 };
 
-const ContributionCard = ({ contribution }) => {
+const ContributionCard = ({ contribution, isMerged }) => {
   const ownerInfo = getOwnerAndRepoNameFromUrl(contribution.repository_url);
+
+  let statusText;
+
+  if (contribution.pull_request) {
+    if (isMerged) {
+      statusText = "merged"; // Set statusText to "merged" for closed and merged PRs
+    } else {
+      statusText = contribution.state;
+    }
+  } else {
+    statusText = contribution.state;
+  }
 
   return (
     <tbody>
@@ -48,7 +60,7 @@ const ContributionCard = ({ contribution }) => {
           style={{
             color: "#B8B8B8",
             display: "flex",
-            flexDirection: "column", 
+            flexDirection: "column",
             alignItems: "center",
           }}
         >
@@ -60,7 +72,7 @@ const ContributionCard = ({ contribution }) => {
               )
             )}
           </span>
-          <span className="d-md-table-cell">{contribution.state}</span>
+          <span className="d-md-table-cell">{statusText}</span>
         </td>
       </tr>
     </tbody>

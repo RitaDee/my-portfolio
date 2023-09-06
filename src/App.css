@@ -822,7 +822,7 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   border-radius: 50%;
   margin-right: 10px;
 } */
-.icon.completed {
+/* .icon.completed {
   background-color: #4caf50;
   color: white;
 }
@@ -830,7 +830,7 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
 .icon.not_planned {
   background-color: #f44336;
   color: white;
-}
+} */
 
 .content {
   flex: 1;
@@ -880,6 +880,10 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
     rgba(170, 54, 124, 0.5) -5.91%,
     rgba(74, 47, 189, 0.5) 111.58%
   );
+}
+
+.tawk-icon-right img {
+  display: none !important;
 }
 
 @media (max-width: 768px) {
