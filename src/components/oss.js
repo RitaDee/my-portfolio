@@ -9,10 +9,9 @@ const Os = () => {
     "Embracing Open Source: My Passion for Public-Driven Contributions";
 
   const [contributions, setContributions] = useState([]);
-  const [selectedType, setSelectedType] = useState("Issues");
   const [selectedPerPage, setSelectedPerPage] = useState("10");
-  console.log("Initial selectedPerPage:", selectedPerPage);
-  const [filteredContributions, setFilteredContributions] = useState([]);
+
+  const [query, setQuery] = useState("");
 
   useEffect(() => {
     const fetchData = async () => {
@@ -21,8 +20,8 @@ const Os = () => {
         const page = 1;
 
         const baseUrl = new URL("https://api.github.com/search/issues");
-        let query = `author:RitaDee -user:RitaDee`;
-        baseUrl.searchParams.set("q", query);
+        let baseQuery = 'author:RitaDee -user:RitaDee';
+        baseUrl.searchParams.set("q", `${baseQuery} ${query}`);
         baseUrl.searchParams.set("per_page", `${perPage}`);
         baseUrl.searchParams.set("page", `${page}`);
 
@@ -31,32 +30,16 @@ const Os = () => {
           throw new Error(`API request failed with status: ${response.status}`);
         }
         const { items } = await response.json();
+        console.log(items);
 
-        setContributions(items); // Set contributions in state
+        setContributions(items); 
       } catch (error) {
         console.error("Something went wrong:", error);
       }
     };
 
     fetchData();
-  }, []);
-
-  useEffect(() => {
-    const filtered = contributions.filter((contribution) => {
-      const isTypeMatch =
-        selectedType === "Issues"
-          ? !contribution.pull_request
-          : contribution.pull_request;
-      const isPerPageMatch =
-        Number(selectedPerPage) === 10 ||
-        Number(selectedPerPage) === 20 ||
-        Number(selectedPerPage) === 30;
-
-      return isTypeMatch && isPerPageMatch;
-    });
-
-    setFilteredContributions(filtered);
-  }, [contributions, selectedType, selectedPerPage]);
+  }, [query]);
 
   return (
     <div id="os">
@@ -64,17 +47,18 @@ const Os = () => {
       <p>{description}</p>
       <div className="issue-type">
         <Form.Select
+          className="responsive-select"
           style={{ width: 250 }}
           size="lg"
-          value={selectedType}
-          onChange={(e) => setSelectedType(e.target.value)}
+          onChange={(e) => setQuery(e.target.value)}
         >
           <span>Type</span>
-          <option>Issues</option>
-          <option>Pull Requests</option>
+          <option value="is:issue">Issues</option>
+          <option value="is:pr is:merged">Pull Requests</option>
         </Form.Select>
         <br />
         <Form.Select
+          className="responsive-select"
           style={{ width: 250 }}
           value={selectedPerPage}
           onChange={(e) => setSelectedPerPage(e.target.value)}
@@ -89,12 +73,12 @@ const Os = () => {
         <Table striped bordered hover responsive>
           <thead style={{ color: "white" }}>
             <tr>
-              <th>RepoOrg</th>
+              <th className="d-none d-md-table-cell">RepoOrg</th>
               <th>Contribution</th>
               <th>Status</th>
             </tr>
           </thead>
-          {filteredContributions
+          {contributions
             .slice(0, Number(selectedPerPage))
             .map((contribution) => (
               <ContributionCard
