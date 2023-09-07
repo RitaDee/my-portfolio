@@ -11,7 +11,7 @@ const Os = () => {
   const [contributions, setContributions] = useState([]);
   const [selectedPerPage, setSelectedPerPage] = useState("10");
 
-  const [query, setQuery] = useState("");
+  const [query, setQuery] = useState("type:issue");
 
   useEffect(() => {
     const fetchData = async () => {

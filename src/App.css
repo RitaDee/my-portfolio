@@ -152,10 +152,6 @@ span.navbar-text {
   border: 1px solid rgba(255, 255, 255, 0.5);
 }
 
-/* .social-icon a:nth-child(3) {
-  background: #fff;
-} */
-
 .social-icon a::before {
   content: "";
   width: 42px;
@@ -760,126 +756,25 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   color: #fff !important;
 }
 
-/* .status {
-  float: right;
-  margin-right: 10px;
-  font-weight: bold;
-}
-
-.status.open {
-  color: green;
-}
-
-.status.completed {
-  color: blue; */
-/* } */
-
-/* Os.css */
-
-/* Styling for the "OS" link */
-/* .navbar .navbar-nav .nav-link.navbar-link.os-link {
-  font-weight: 400;
-  color: #fff !important;
-  letter-spacing: 0.8px;
-  padding: 0 25px;
-  font-size: 18px;
-  opacity: 0.75;
-} */
-
-/* Styling for the "OS" link when it's active */
-.navbar .navbar-nav .nav-link.navbar-link.os-link.active {
-  opacity: 1;
-  /* Add your desired styles for the active link here */
-}
-
-/* Styling for the modal */
-.os-modal {
-  /* Add your modal styles here */
-  background-color: #121212;
-  /* Example background color */
-  color: #fff;
-  /* Example text color */
-}
-
-/* ContributionCard.css */
-/* .os-item {
-  display: flex;
-  align-items: center;
-  padding: 10px;
-  border: 1px solid #ccc;
-  border-radius: 5px;
-  margin-bottom: 10px;
-} */
-
-/* .icon {
-  flex: 0 0 30px;
-  height: 30px;
-  width: 30px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 18px;
-  border-radius: 50%;
-  margin-right: 10px;
-} */
-/* .icon.completed {
-  background-color: #4caf50;
-  color: white;
-}
-
-.icon.not_planned {
-  background-color: #f44336;
-  color: white;
-} */
-
-.content {
-  flex: 1;
-}
-
-.title {
-  font-size: 18px;
-  font-weight: bold;
-  margin-bottom: 5px;
-}
-
-.status {
-  font-size: 14px;
-  font-weight: bold;
-  margin-bottom: 5px;
-}
-
-.owner {
-  font-size: 14px;
-}
-
-#os {
-  padding: 40px;
-  background-color: #f8f9fa;
-  text-align: center;
-}
-
-.os-title {
-  font-size: 32px;
-  font-weight: bold;
-  margin-bottom: 20px;
-}
-
-.issue-type {
-  display: flex;
-  justify-content: space-between;
-  padding-bottom: 2.5rem;
-}
-
-.os-form {
-  width: 70%;
-}
-
 #os {
   background: linear-gradient(
     90.21deg,
     rgba(170, 54, 124, 0.5) -5.91%,
     rgba(74, 47, 189, 0.5) 111.58%
   );
+  padding: 40px;
+  text-align: center;
+}
+
+#os h1 {
+  font-size: 2rem;
+  margin-bottom: 0.5rem;
+}
+
+.issue-type {
+  display: flex;
+  justify-content: space-between;
+  padding-bottom: 2.5rem;
 }
 
 .tawk-icon-right img {
@@ -891,9 +786,15 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
     display: none !important;
   }
 
-    
-    /* .responsive-select {
-      margin-bottom: 10px;
-    } */
+  .issue-type {
+    gap: 10px;
+  }
 
+     #os h1 {
+      font-size: 1.5rem;
+    }
+  
+        #os p {
+      font-size: 0.9rem;
+    }
 }
