@@ -1,3 +1,4 @@
+// ContributionCard.js
 import React from "react";
 import { VscIssues, VscGitPullRequest } from "react-icons/vsc";
 import { HiOutlineCheckCircle } from "react-icons/hi";
@@ -20,11 +21,23 @@ const displayIcon = (type, status) => {
   return Icon[type];
 };
 
-const ContributionCard = ({ contribution }) => {
+const ContributionCard = ({ contribution, isMerged }) => {
   const ownerInfo = getOwnerAndRepoNameFromUrl(contribution.repository_url);
 
+  let statusText;
+
+  if (contribution.pull_request) {
+    if (isMerged) {
+      statusText = "merged"; // Set statusText to "merged" for closed and merged PRs
+    } else {
+      statusText = contribution.state;
+    }
+  } else {
+    statusText = contribution.state;
+  }
+
   return (
-    <tbody responsive>
+    <tbody>
       <tr key={contribution.id}>
         <td className="d-none d-md-table-cell" style={{ color: "#B8B8B8" }}>
           {ownerInfo.owner}
@@ -48,7 +61,7 @@ const ContributionCard = ({ contribution }) => {
           style={{
             color: "#B8B8B8",
             display: "flex",
-            flexDirection: "column", 
+            flexDirection: "column",
             alignItems: "center",
           }}
         >
@@ -60,7 +73,7 @@ const ContributionCard = ({ contribution }) => {
               )
             )}
           </span>
-          <span className="d-md-table-cell">{contribution.state}</span>
+          <div className="status-text">{statusText}</div>
         </td>
       </tr>
     </tbody>
