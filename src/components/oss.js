@@ -1,25 +1,27 @@
-import React, { useEffect, useState } from 'react';
-import { ListGroup } from 'react-bootstrap'; 
-import ContributionCard from './ContributionCard';
+import React, { useEffect, useState } from "react";
+import { ListGroup, Table } from "react-bootstrap";
+import ContributionCard from "./ContributionCard";
+import Form from "react-bootstrap/Form";
 
 const Os = () => {
+  const title = "Open Source Contributions";
   const description =
-    'List of open source contributions made by Rita Daniel';
-  const title = 'Rita Daniel Open Source Contributions'; // Define the title
+    "Embracing Open Source: My Passion for Public-Driven Contributions";
 
-  // Add state for contributions
   const [contributions, setContributions] = useState([]);
+  const [selectedPerPage, setSelectedPerPage] = useState("10");
 
-  // Fetch contributions when the component mounts
+  const [query, setQuery] = useState("type:issue");
+
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const perPage = 20; 
-        const page = 1; 
+        const perPage = 30;
+        const page = 1;
 
         const baseUrl = new URL("https://api.github.com/search/issues");
-        let query = `author:RitaDee -user:RitaDee`;
-        baseUrl.searchParams.set("q", query);
+        let baseQuery = 'author:RitaDee -user:RitaDee';
+        baseUrl.searchParams.set("q", `${baseQuery} ${query}`);
         baseUrl.searchParams.set("per_page", `${perPage}`);
         baseUrl.searchParams.set("page", `${page}`);
 
@@ -28,33 +30,67 @@ const Os = () => {
           throw new Error(`API request failed with status: ${response.status}`);
         }
         const { items } = await response.json();
-         console.log(items)
+        console.log(items);
 
-        setContributions(items); // Set contributions in state
+        setContributions(items); 
       } catch (error) {
         console.error("Something went wrong:", error);
       }
-    }
-    
-    fetchData();
-  }, []);
+    };
 
-  // Render your component here
+    fetchData();
+  }, [query]);
+
   return (
     <div id="os">
-      <h1 className="os-title">{title}</h1>
-      <p className="os-description">{description}</p>
+      <h1>{title}</h1>
+      <p>{description}</p>
+      <div className="issue-type">
+        <Form.Select
+          className="responsive-select"
+          style={{ width: 250 }}
+          size="lg"
+          onChange={(e) => setQuery(e.target.value)}
+        >
+          <span>Type</span>
+          <option value="type:issue">Issues</option>
+          <option value="type:pr">Pull Requests</option>
+        </Form.Select>
+        <br />
+        <Form.Select
+          className="responsive-select"
+          style={{ width: 250 }}
+          value={selectedPerPage}
+          onChange={(e) => setSelectedPerPage(e.target.value)}
+        >
+          <span>Per Page</span>
+          <option>10</option>
+          <option>20</option>
+          <option>30</option>
+        </Form.Select>
+      </div>
       <ListGroup>
-        {contributions.map((contribution) => (
-          <ContributionCard
-            contribution={contribution}
-            key={contribution.id}
-          />
-        ))}
+        <Table striped bordered hover responsive>
+          <thead style={{ color: "white" }}>
+            <tr>
+              <th className="d-none d-md-table-cell">RepoOrg</th>
+              <th>Contribution</th>
+              <th>Status</th>
+            </tr>
+          </thead>
+          {contributions
+            .slice(0, Number(selectedPerPage))
+            .map((contribution) => (
+              <ContributionCard
+                contribution={contribution}
+                key={contribution.id}
+                isMerged={contribution.pull_request && contribution.state === "closed"}
+              />
+            ))}
+        </Table>
       </ListGroup>
     </div>
   );
 };
-
 
 export default Os;

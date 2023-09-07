@@ -5,13 +5,11 @@ import navIcon1 from "../assets/img/nav-icon1.svg";
 import navIcon2 from "../assets/img/nav-icon2.svg";
 import navIcon3 from "../assets/img/nav-icon3.svg";
 import { HashLink } from "react-router-hash-link";
-import { BrowserRouter as Router, Link } from "react-router-dom";
-import Os from "./oss"; 
+import { BrowserRouter as Router } from "react-router-dom";
 
 export const NavBar = () => {
   const [activeLink, setActiveLink] = useState("home");
   const [scrolled, setScrolled] = useState(false);
-  const [showOsModal, setShowOsModal] = useState(false); // State for the modal
 
   useEffect(() => {
     const onScroll = () => {
@@ -29,14 +27,6 @@ export const NavBar = () => {
 
   const onUpdateActiveLink = (value) => {
     setActiveLink(value);
-  };
-
-  const handleShowOsModal = () => {
-    setShowOsModal(true); // Show the modal when "OS" is clicked
-  };
-
-  const handleCloseOsModal = () => {
-    setShowOsModal(false); // Close the modal
   };
 
   return (
@@ -80,21 +70,19 @@ export const NavBar = () => {
               >
                 Projects
               </Nav.Link>
+              <Nav.Link
+                href="#os"
+                className={
+                  activeLink === "projects"
+                    ? "active navbar-link"
+                    : "navbar-link"
+                }
+                onClick={() => onUpdateActiveLink("projects")}
+              >
+                Os
+              </Nav.Link>
             </Nav>
 
-            <Link
-              to="#"
-              className={
-                activeLink === "os"
-                  ? "active navbar-link os-link"
-                  : "navbar-link os-link"
-              }
-              onClick={handleShowOsModal}
-            >
-              OS
-            </Link>
-
-            {/* Social icons and "Let’s Connect" button here */}
             <span className="navbar-text">
               <div className="social-icon">
                 <a
@@ -128,20 +116,6 @@ export const NavBar = () => {
           </Navbar.Collapse>
         </Container>
       </Navbar>
-
-      {/* Modal for OS component */}
-      <Modal
-        show={showOsModal}
-        onHide={handleCloseOsModal}
-        className="os-modal"
-      >
-        <Modal.Header closeButton>
-          <Modal.Title>Open Source Contributions</Modal.Title>
-        </Modal.Header>
-        <Modal.Body>
-          <Os />
-        </Modal.Body>
-      </Modal>
     </Router>
   );
 };
