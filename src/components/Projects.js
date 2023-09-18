@@ -3,11 +3,9 @@ import { ProjectCard } from "./ProjectCard";
 import colorShape2 from "../assets/img/color-sharp2.WebP";
 import projImg1 from "../assets/img/project-img1.WebP";
 import projImg2 from "../assets/img/project2.WebP";
-import projImg7 from "../assets/img/project7.WebP";
 import projImg4 from "../assets/img/project4.WebP";
 import projImg5 from "../assets/img/project5.WebP";
 import projImg6 from "../assets/img/project6.WebP";
-import projImg8 from "../assets/img/project8.WebP";
 import projImg9 from "../assets/img/project9.WebP";
 import projImg10 from "../assets/img/project10.WebP";
 import 'animate.css';
@@ -25,18 +23,18 @@ export const Projects = () => {
       GitHub: "https://github.com/RitaDee/marplex-video-rtm"
     },
     {
-      title: "Diva Spends",
-      description: "Diva Spends is a web app to manage budget. The user adds new transactions associated with an expense category. A database store the budget. Built with Ruby on Rails",
-      imgUrl: projImg7,
-      link: 'https://diva-spends.onrender.com/',
-      GitHub: "https://github.com/RitaDee/budget_app"
+      title: "Space Traveller's Hub",
+      description: "This webapp works with real live data from the SpaceX API. The application provides commercial and scientific space travel services. It also allows users to book rockets and join selected space missions. Built with React, and Redux",
+      imgUrl: projImg4,
+      link: "https://spacetravel-speculoos-5b113c.netlify.app/",
+      GitHub: "https://github.com/RitaDee/space-travelers-hub"
     },
     {
-      title: "Event Connect",
-      description: "Event Connect is an application which allows users to create, delete and reserve available event. Built with React, Ruby on Rails and Chakra Ui",
-      imgUrl: projImg8,
-      link: 'https://event-connect-capstone.web.app/',
-      GitHub: "https://github.com/RitaDee/event_connect"
+      title: "Math Magic",
+      description: "This app performs basic mathematical operations such as addition, subtraction, multiplication, and division.",
+      imgUrl: projImg10,
+      link: "https://mathdee.netlify.app/",
+      GitHub: "https://github.com/RitaDee/math-magic"
     }
   ];
 
@@ -48,14 +46,6 @@ export const Projects = () => {
       link: "https://watchrsmovies.netlify.app/",
       GitHub: "https://github.com/RitaDee/RS-Movie-App", 
     },
-    
-    {
-      title: "Space Traveller's Hub",
-      description: "This webapp works with real live data from the SpaceX API. The application provides commercial and scientific space travel services. It also allows users to book rockets and join selected space missions. Built with React, and Redux",
-      imgUrl: projImg4,
-      link: "https://spacetravel-speculoos-5b113c.netlify.app/",
-      GitHub: "https://github.com/RitaDee/space-travelers-hub"
-    },
      
     {
       title: "Leaderboard",
@@ -64,16 +54,16 @@ export const Projects = () => {
       link: "https://leaderboardchart.netlify.app/",
       GitHub: "https://github.com/RitaDee/Leader-board"
     },
-  ];
-
-  const thirdProjects = [
-     {
+    {
       title: "Event Site",
       description: "Event",
       imgUrl: projImg5,
       link: "https://artevent.netlify.app/",
       GitHub: "https://github.com/RitaDee/Art-and-culture"
     },
+  ];
+
+  const thirdProjects = [
     {
       title: "Landing Page",
       description: "Our landing page offers a seamless user experience, showcasing our cutting-edge products and services.",
@@ -81,13 +71,6 @@ export const Projects = () => {
       link: "https://landingpag45.netlify.app/",
       GitHub: "https://github.com/RitaDee/landing-page"
     },
-    {
-      title: "Math Magic",
-      description: "This app performs basic mathematical operations such as addition, subtraction, multiplication, and division.",
-      imgUrl: projImg10,
-      link: "https://mathdee.netlify.app/",
-      GitHub: "https://github.com/RitaDee/math-magic"
-    }
   ]
 
   return (
