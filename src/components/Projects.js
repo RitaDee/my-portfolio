@@ -8,19 +8,26 @@ import projImg5 from "../assets/img/project5.WebP";
 import projImg6 from "../assets/img/project6.WebP";
 import projImg9 from "../assets/img/project9.WebP";
 import projImg10 from "../assets/img/project10.WebP";
+import projImg11 from "../assets/img/cars.png";
 import 'animate.css';
 import TrackVisibility from 'react-on-screen';
 
 
 export const Projects = () => {
   const firstProjects = [
-
+    {
+      title: 'Car Hub',
+      description: "A car rental app that enables users to find, book and rent a car.",
+      imgUrl: projImg11,
+      link: "https://cars-sage.vercel.app/",
+      GitHub: "https://github.com/RitaDee/cars",
+    },
     {
       title: "Marplex RTM",
       description: "A real time messaging & video calling web app. Built with HTML, CSS and JavaScript.",
       imgUrl: projImg1,
       link: "https://marplexr.netlify.app/",
-      GitHub: "https://github.com/RitaDee/marplex-video-rtm"
+      GitHub: "https://github.com/RitaDee/marplex-video-rtm",
     },
     {
       title: "Space Traveller's Hub",
@@ -29,13 +36,7 @@ export const Projects = () => {
       link: "https://spacetravel-speculoos-5b113c.netlify.app/",
       GitHub: "https://github.com/RitaDee/space-travelers-hub"
     },
-    {
-      title: "Math Magic",
-      description: "This app performs basic mathematical operations such as addition, subtraction, multiplication, and division.",
-      imgUrl: projImg10,
-      link: "https://mathdee.netlify.app/",
-      GitHub: "https://github.com/RitaDee/math-magic"
-    }
+    
   ];
 
   const secondProjects = [
@@ -55,15 +56,22 @@ export const Projects = () => {
       GitHub: "https://github.com/RitaDee/Leader-board"
     },
     {
+      title: "Math Magic",
+      description: "This app performs basic mathematical operations such as addition, subtraction, multiplication, and division.",
+      imgUrl: projImg10,
+      link: "https://mathdee.netlify.app/",
+      GitHub: "https://github.com/RitaDee/math-magic"
+    },
+  ];
+
+  const thirdProjects = [
+     {
       title: "Event Site",
       description: "Event",
       imgUrl: projImg5,
       link: "https://artevent.netlify.app/",
       GitHub: "https://github.com/RitaDee/Art-and-culture"
     },
-  ];
-
-  const thirdProjects = [
     {
       title: "Landing Page",
       description: "Our landing page offers a seamless user experience, showcasing our cutting-edge products and services.",
