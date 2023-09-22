@@ -14,6 +14,7 @@ This portfolio website serves as a platform to display my projects, skills, and 
 
 ## Features
 
+
 - **Home**: A brief introduction with a profile picture.
 - **Projects**: Showcase of my portfolio projects with descriptions and links.
 - **Skills**: Display of my technical skills and competencies.
@@ -22,15 +23,18 @@ This portfolio website serves as a platform to display my projects, skills, and 
 
 ## Installation
 
+
 To run this project locally, follow these steps:
 
 1. Clone the repository:
+
 
    ```bash
    git clone https://github.com/RitaDee/cars.git
    ```
 
 2. Navigate to the project directory:
+
 
    ```bash
    cd your-portfolio
