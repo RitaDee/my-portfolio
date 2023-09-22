@@ -72,7 +72,7 @@ This project is open-source and available under the [MIT License](LICENSE).
 
 If you would like to get in touch or have any questions, feel free to reach out to me:
 
-- Email: your.email@example.com
+- Email: ritankemdaniel@gmail.com
 - LinkedIn: [LinkedIn](https://www.linkedin.com/in/rita-daniel/)
 - GitHub: [GitHub](https://github.com/RitaDee/)
 
