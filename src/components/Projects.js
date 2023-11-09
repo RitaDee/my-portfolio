@@ -9,9 +9,9 @@ import projImg6 from "../assets/img/project6.WebP";
 import projImg9 from "../assets/img/project9.WebP";
 import projImg10 from "../assets/img/project10.WebP";
 import projImg11 from "../assets/img/cars.png";
+import project12 from "../assets/img/project12.WebP";
 import 'animate.css';
 import TrackVisibility from 'react-on-screen';
-
 
 export const Projects = () => {
   const firstProjects = [
@@ -22,6 +22,13 @@ export const Projects = () => {
       link: "https://cars-sage.vercel.app/",
       GitHub: "https://github.com/RitaDee/cars",
     },
+     {
+      title: "Movies",
+      description: "This is a movie web application built with React, and Tailwind CSS.",
+      imgUrl: project12,
+      link: "https://moviedb-ritadee.vercel.app",
+      GitHub: "https://github.com/RitaDee/moviedb"
+    },
     {
       title: "Marplex RTM",
       description: "A real time messaging & video calling web app. Built with HTML, CSS and JavaScript.",
@@ -29,6 +36,9 @@ export const Projects = () => {
       link: "https://marplexr.netlify.app/",
       GitHub: "https://github.com/RitaDee/marplex-video-rtm",
     },
+  ];
+
+  const secondProjects = [
     {
       title: "Space Traveller's Hub",
       description: "This webapp works with real live data from the SpaceX API. The application provides commercial and scientific space travel services. It also allows users to book rockets and join selected space missions. Built with React, and Redux",
@@ -36,10 +46,6 @@ export const Projects = () => {
       link: "https://spacetravel-speculoos-5b113c.netlify.app/",
       GitHub: "https://github.com/RitaDee/space-travelers-hub"
     },
-    
-  ];
-
-  const secondProjects = [
     {
       title: "RS TV App",
       description: "RS TV is an Api-based media and entertainment application. Built with JavaScript",
@@ -55,6 +61,9 @@ export const Projects = () => {
       link: "https://leaderboardchart.netlify.app/",
       GitHub: "https://github.com/RitaDee/Leader-board"
     },
+  ];
+
+  const thirdProjects = [
     {
       title: "Math Magic",
       description: "This app performs basic mathematical operations such as addition, subtraction, multiplication, and division.",
@@ -62,9 +71,6 @@ export const Projects = () => {
       link: "https://mathdee.netlify.app/",
       GitHub: "https://github.com/RitaDee/math-magic"
     },
-  ];
-
-  const thirdProjects = [
      {
       title: "Event Site",
       description: "Event",
