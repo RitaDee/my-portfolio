@@ -4,7 +4,7 @@ This is my personal portfolio project showcasing my work and skills. You can acc
 
 ## Overview
 
-This portfolio website serves as a platform to display my projects, skills, and experiences to potential employers, collaborators, and anyone interested in my work. It provides a brief introduction to who I am, what I do, and how to get in touch with me.
+This portfolio website is a platform that showcases my skills, projects, and experiences to anyone interested in my work. It gives a brief introduction of who I am, what I do, and how to contact me. It is designed to attract potential employers and collaborators.
 
 ## Technologies Used
 
@@ -16,7 +16,7 @@ This portfolio website serves as a platform to display my projects, skills, and 
 
 
 - **Home**: A brief introduction with a profile picture.
-- **Projects**: Showcase of my portfolio projects with descriptions and links.
+- **Projects**: Showcase my portfolio projects with descriptions and links.
 - **Skills**: Display of my technical skills and competencies.
 - **Contact**: A contact form to get in touch with me.
 - **Responsive Design**: The website is designed to be responsive and accessible on various devices.
@@ -72,7 +72,7 @@ This project is open-source and available under the [MIT License](LICENSE).
 
 If you would like to get in touch or have any questions, feel free to reach out to me:
 
-- Email: ritankemdaniel@gmail.com
+- Email: [Email](ritankemdaniel@gmail.com)
 - LinkedIn: [LinkedIn](https://www.linkedin.com/in/rita-daniel/)
 - GitHub: [GitHub](https://github.com/RitaDee/)
 
