@@ -8,6 +8,7 @@ const app = express();
 //   service: "gmail"
 // });
 
+// Handle error
 // contactEmail.verify((error) => {
 //   if (error) {
 //     console.log(error);
