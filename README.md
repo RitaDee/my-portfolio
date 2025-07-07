@@ -30,7 +30,7 @@ To run this project locally, follow these steps:
 
 
    ```bash
-   git clone https://github.com/RitaDee/cars.git
+   git clone https://github.com/RitaDee/my-portfolio.git
    ```
 
 2. Navigate to the project directory:
